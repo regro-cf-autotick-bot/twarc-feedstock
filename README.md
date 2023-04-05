@@ -1,11 +1,11 @@
-About twarc
-===========
+About twarc-feedstock
+=====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/twarc-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/docnow/twarc
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/twarc-feedstock/blob/main/LICENSE.txt)
 
 Summary: Archive tweets from the command line
 
