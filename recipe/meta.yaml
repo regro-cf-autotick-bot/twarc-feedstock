@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/twarc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/twarc-{{ version }}.tar.gz
   sha256: fa8ee3052d8b9678231bea95d1bdcbabb3968d35c56a8d1fcedc8982e8c66a66
 
 build:
@@ -15,15 +15,15 @@ build:
     - twarc2 = twarc.command2:twarc2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.3
+    - python {{ python_min }}
     - pytest-runner
     - pip
   run:
-    - python >=3.3
+    - python >={{ python_min }}
     - click >=7,<9
     - click-config-file >=0.6
     - click-plugins >=1
@@ -41,6 +41,7 @@ test:
     - twarc2 --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/docnow/twarc
